@@ -7,10 +7,10 @@ setColor(): Set color to a given value
 
 getColor(): Get current color
 
-getState(): returns an enum giving the current state. Can be:
+The color selector communicates to the user with unity events. The following events are available:
 
-  busy: user selecting color
-  
-  okay: user selected okay button
-  
-  cancel: user selected cancel button
+okayEvent: called when user taps okay button
+
+cancelEvent: called when user taps cancel button
+
+colorChangeEvent: called when color has changed
