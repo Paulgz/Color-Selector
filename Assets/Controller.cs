@@ -27,8 +27,8 @@ public class Controller : MonoBehaviour
         activateButton.SetActive(true);
         colorSelector.gameObject.SetActive(false);
     }
-    public void colorChange(Color c)
+    public void colorChange(Color newColor)
     {
-        myCamera.backgroundColor = colorSelector.getColor();
+        myCamera.backgroundColor = newColor;
     }
 }
