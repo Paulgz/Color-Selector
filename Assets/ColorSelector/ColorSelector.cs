@@ -1,24 +1,21 @@
 using SmallTools;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ColorSelector : MonoBehaviour {
+    public UnityEvent okayEvent=new();
+    public UnityEvent cancelEvent=new();
     public ColorSliders sliders;
     public ColorWheelContainer wheel;
-    public Text      colorName;
+    public Text     title;
     public Image    preview;
 
     private Color current;
-    private State state;
 
     public void init()
     {
         sliders.init();
-        state = State.busy;
-    }
-    public State getState()
-    {
-        return state;
     }
     private void OnEnable()
     {
@@ -26,9 +23,6 @@ public class ColorSelector : MonoBehaviour {
     }
     private void Update()
     {
-        if(state!=State.busy) {
-            return;
-        }
         if( sliders.inUse()) {
             current = sliders.getColor();
             wheel.setColor(current);
@@ -40,11 +34,11 @@ public class ColorSelector : MonoBehaviour {
     }
     public void buttonOkay()
     {
-        state = State.okay;
+        okayEvent.Invoke();
     }
     public void buttonCancel()
     {
-        state = State.cancel;
+        cancelEvent.Invoke();
     }
     public Color getColor()
     {
@@ -56,15 +50,8 @@ public class ColorSelector : MonoBehaviour {
         sliders.setColor(_color);
         wheel.setColor(_color);
     }
-    public void setName(string _key)
+    public void setTitle(string _key)
     {
-        colorName.text = _key;
-    }
-    //*******************************************************
-    public enum State
-    {
-        busy,
-        okay,
-        cancel,
+        title.text = _key;
     }
 }
