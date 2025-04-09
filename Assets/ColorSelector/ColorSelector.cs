@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class ColorSelector : MonoBehaviour {
     public UnityEvent okayEvent=new();
     public UnityEvent cancelEvent=new();
+    public UnityEvent<Color> colorChangeEvent=new();
     public ColorSliders sliders;
     public ColorWheelContainer wheel;
     public Text     title;
     public Image    preview;
 
     private Color current;
+    private Color lastSent;
 
     public void init()
     {
@@ -31,6 +33,10 @@ public class ColorSelector : MonoBehaviour {
             sliders.setColor(current);
         }
         preview.color = current;
+        if(current != lastSent) {
+            lastSent = current;
+            colorChangeEvent.Invoke(current);
+        }
     }
     public void buttonOkay()
     {
@@ -47,6 +53,7 @@ public class ColorSelector : MonoBehaviour {
     public void setColor(Color _color)
     {
         current = _color;
+        lastSent = _color;
         sliders.setColor(_color);
         wheel.setColor(_color);
     }

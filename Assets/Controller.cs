@@ -8,12 +8,6 @@ public class Controller : MonoBehaviour
 
     private Color startColor;
 
-    private void Update()
-    {
-        if(colorSelector.isActiveAndEnabled) {
-            myCamera.backgroundColor = colorSelector.getColor();
-        }
-    }
     public void buttonSelectColor()
     {
         startColor = myCamera.backgroundColor;
@@ -32,5 +26,9 @@ public class Controller : MonoBehaviour
         myCamera.backgroundColor = startColor;
         activateButton.SetActive(true);
         colorSelector.gameObject.SetActive(false);
+    }
+    public void colorChange(Color c)
+    {
+        myCamera.backgroundColor = colorSelector.getColor();
     }
 }
