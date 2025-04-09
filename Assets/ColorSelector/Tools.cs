@@ -7,8 +7,7 @@ public static class Tools
     public static Canvas getCanvas(Transform trans)
     {
         for(Transform t = trans; t!=null; t = t.parent) {
-            Canvas canvas = t.GetComponent<Canvas>();
-            if((canvas!=null)) {
+            if(t.TryGetComponent<Canvas>(out var canvas)) {
                 return canvas;
             }
         }

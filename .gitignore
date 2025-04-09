@@ -1,32 +1,16 @@
-*.blend1
-*.blend2
 *.suo
-Assets/UnityVS/*
-Assets/UnityVS.meta
-UnityVS.*
 
-switcheroo.cfg
-soundFonts/*
 UserSettings/*
 obj/*
 Temp/*
 Library/*
-screenShots/*
-/Assets/@Themes*
 .vs/
 builds/
 Logs/
 UserSettings/
-ss/
-helpExport/
-helpImport/
 
 *.csproj
 *.pidb
 *.sln
 *.userprefs
 *.unityproj
-debug.log
-awesomium_logs
-output_log.txt
-/windowsInstaller/Output/*

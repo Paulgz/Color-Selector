@@ -27,7 +27,7 @@ namespace SmallTools {
                 slider.gameObject.SetActive(false);
             }
         }
-        private void onValueChanged(float value)
+        private void onValueChanged(float _)
         {
             beingUsed = true;
         }
