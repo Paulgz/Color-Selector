@@ -1,0 +1,32 @@
+Class Summary
+=============
+
+ColorSelector
+-------------
+Main controller for everything. Merges input from rgb sliders and color wheel. User functions here are:
+
+getColor(): get the current color
+setColor(): set the current color
+setTitle(): set text at the top of the panel
+
+The okay/cancel buttons are linked to the functions buttonOkay()/buttonCancel() which call unity events which the user can connect with.
+
+ColorSliders
+------------
+Sets color through RGB sliders
+
+ColorWheel
+----------
+Sets color via a color wheel & brightness slider. The color here is set using HSV value, H being hue, S saturation and V brightness. Looking at the wheel, the angle is the hue and the distance from the center the saturation. The brightness V is set with the vertical slider labelled V.
+
+ColorWheelContainer
+-------------------
+The ColorSelector communicates with the colorwheel using this.
+
+ColorSelectorSlider
+-------------------
+Used for RGB sliders.
+
+Tools
+-----
+Miscellaneous useful tools type functions
