@@ -6,7 +6,7 @@ namespace SmallTools {
     public class ColorWheel : MaskableGraphic, IColorPicker {
         public int segments=12;
         public int rings=2;
-        public RectTransform   cursor;
+        public Image   cursor;
         public Slider slider_v;
         public float outlineSize = 0.1f;
 
@@ -26,6 +26,7 @@ namespace SmallTools {
         private void Update()
         {
             redraw();
+            cursor.color = getColor();
         }
         protected override void OnEnable()
         {
@@ -153,7 +154,7 @@ namespace SmallTools {
             Vector2 rel = new(Mathf.Cos(angle), Mathf.Sin(angle));
             rel *= distance;
             Vector2 middle = rectTransform.position;
-            cursor.position = middle + rel;
+            cursor.rectTransform.position = middle + rel;
         }
         public float getWheelRadius()
         {
@@ -170,7 +171,7 @@ namespace SmallTools {
         public Color getColor()
         {
             Vector2 middle = getWheelCenter();
-            Vector2 where = cursor.position;
+            Vector2 where = cursor.rectTransform.position;
             Vector2 rel = where-middle;
             float angle = Mathf.Atan2(rel.y,rel.x);
             angle = Tools.fixAngleRad(angle);
@@ -188,11 +189,12 @@ namespace SmallTools {
             float   r = getWheelRadius();
             Vector2 rel=where-getWheelCenter();
             float d = rel.magnitude;
+            RectTransform rt = cursor.rectTransform;
             if(d != 0) {
                 float dNew=Mathf.Min(d, r);
-                cursor.position = getWheelCenter() + rel * (dNew / d);
+                rt.position = getWheelCenter() + rel * (dNew / d);
             } else {
-                cursor.position = getWheelCenter();
+                rt.position = getWheelCenter();
             }
         }
         public void pointerDown(BaseEventData _event)
