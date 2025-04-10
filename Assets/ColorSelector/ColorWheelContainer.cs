@@ -1,7 +1,8 @@
 using UnityEngine;
 
-namespace SmallTools {
-    public class ColorWheelContainer : MonoBehaviour, IColorPicker {
+namespace ColorPicker {
+    public class ColorWheelContainer : MonoBehaviour
+    {
         public ColorWheel wheel;
 
         public Color getColor()

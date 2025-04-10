@@ -2,8 +2,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace SmallTools {
-    public class ColorWheel : MaskableGraphic, IColorPicker {
+namespace ColorPicker {
+    public class ColorWheel : MaskableGraphic
+    {
         public int segments=12;
         public int rings=2;
         public Image   cursor;

@@ -1,4 +1,4 @@
-using SmallTools;
+using ColorPicker;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;

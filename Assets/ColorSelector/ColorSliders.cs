@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SmallTools {
-    public class ColorSliders : MonoBehaviour, IColorPicker {
+namespace ColorPicker {
+    public class ColorSliders : MonoBehaviour
+    {
         public ColorSelector_slider slider;
 
         private readonly string[]    keysRgb={ "R", "G", "B"};
