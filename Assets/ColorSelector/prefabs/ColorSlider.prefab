@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 7964449152395409189}
   - component: {fileID: 6155279661762062801}
   m_Layer: 5
-  m_Name: ColorComponent
+  m_Name: ColorSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

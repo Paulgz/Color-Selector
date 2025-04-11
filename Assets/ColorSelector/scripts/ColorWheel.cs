@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace ColorPicker {
+namespace ColorSlider {
     public class ColorWheel : MaskableGraphic
     {
         public int segments=12;

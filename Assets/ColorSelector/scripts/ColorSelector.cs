@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace ColorPicker {
+namespace ColorSlider {
     public class ColorSelector : MonoBehaviour {
         public UnityEvent okayEvent=new();
         public UnityEvent cancelEvent=new();
         public UnityEvent<Color> colorChangeEvent=new();
-        public ColorSliders sliders;
+        public ColorRgb sliders;
         public ColorWheelContainer wheel;
         public Text     title;
         public Image    preview;

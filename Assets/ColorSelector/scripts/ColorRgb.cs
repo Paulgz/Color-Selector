@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ColorPicker {
-    public class ColorSliders : MonoBehaviour
+namespace ColorSlider {
+    public class ColorRgb : MonoBehaviour
     {
-        public ColorSelector_slider slider;
+        public ColorSlider slider;
 
         private readonly string[]    keysRgb={ "R", "G", "B"};
         private readonly Color[]     colorsRgb={Color.red,Color.green,Color.blue};
-        private readonly List<ColorSelector_slider>  sliders=new();
+        private readonly List<ColorSlider>  sliders=new();
         private bool beingUsed;
 
         public void init()
@@ -16,7 +16,7 @@ namespace ColorPicker {
             if(sliders.Count == 0) {
                 for(int i = 0; i < 3; i++) {
                     GameObject go = Instantiate(slider.gameObject, slider.transform.parent);
-                    sliders.Add(go.GetComponent<ColorSelector_slider>());
+                    sliders.Add(go.GetComponent<ColorSlider>());
                 }
                 for(int i = 0; i < 3; i++) {
                     sliders[i].key.text = keysRgb[i];
