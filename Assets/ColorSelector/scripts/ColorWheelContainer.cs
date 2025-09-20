@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ColorSlider {
+namespace ColorTools {
     public class ColorWheelContainer : MonoBehaviour
     {
         public ColorWheel wheel;

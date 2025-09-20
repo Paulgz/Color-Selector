@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ColorSlider {
+namespace ColorTools {
     public class ColorSlider : MonoBehaviour {
         public Slider   slider;
         public Text     key;

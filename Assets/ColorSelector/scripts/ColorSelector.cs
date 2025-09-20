@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace ColorSlider {
+namespace ColorTools {
     public class ColorSelector : MonoBehaviour {
         public UnityEvent okayEvent=new();
         public UnityEvent cancelEvent=new();

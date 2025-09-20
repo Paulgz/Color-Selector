@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ColorSlider {
+namespace ColorTools {
     public class ColorRgb : MonoBehaviour
     {
         public ColorSlider slider;

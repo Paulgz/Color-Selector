@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ColorSlider {
+namespace ColorTools {
     public static class Tools {
         public const float twoPi = Mathf.PI*2.0f;
 

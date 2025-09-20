@@ -1,4 +1,4 @@
-using ColorSlider;
+using ColorTools;
 using UnityEngine;
 
 public class Controller : MonoBehaviour
